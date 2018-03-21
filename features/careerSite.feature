@@ -16,7 +16,7 @@ So that I can apply for a job
     And the Find button is clicked
     Then an open position should be displayed
     And the title of the position should be <role>
-    And the location of the position should be Debrecen, Hungary
+    And the location of the position should be DEBRECEN, HUNGARY
     And the priority of the position should be HOT
     And the description of the position should start with: <description>
 

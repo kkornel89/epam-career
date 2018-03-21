@@ -25,7 +25,15 @@ module.exports = function(){
                 });
             });
         };
-        return global.driver.manage().window().maximize();
+        return global.driver.executeScript(function() {
+            return {
+                posx: window.screen.availWidth,
+                posy: window.screen.availHeight
+            };
+        }).then(function(result) {
+            // global.driver.manage().window().setPosition(-1*result.posx, 0);
+            global.driver.manage().window().maximize();
+        });
     });
 
     this.registerHandler('AfterFeatures', function(){
